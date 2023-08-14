@@ -5,15 +5,41 @@ version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
+
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Dependencies that is not critical, so can be use without a version
+  intl:
   cupertino_icons:
+  http:
+  google_fonts:
+
+
+  mobx: ^2.2.0
+  flutter_mobx: ^2.0.6+5
+
+
+
+
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints:
+  build_runner: ^2.4.6
+  mobx_codegen: ^2.3.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/city.png
+    - assets/humidity.png
+    - assets/max.png
+    - assets/min.png
+    - assets/sun.png
+    - assets/wind.png
