@@ -1,8 +1,18 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:frameworkweather/envs/base.dart';
+import 'package:frameworkweather/services/services.dart';
 import 'package:frameworkweather/view/weatherPage.dart';
 
-void main() {
+void app(Environments env) {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Solve the error: "Handshake error in client"
+  HttpOverrides.global = MyHttpOverrides();
+
+  WeatherService.instance.init(env.OPENWEATHERKEY);
   runApp(const MyApp());
 }
 

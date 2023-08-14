@@ -1,16 +1,18 @@
 # frameworkweather
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## How to run
 
-A few resources to get you started if this is your first Flutter project:
+The project can be expanded to have multiple entrypoints, with different environments.
+For now, just have the production entrypoint. Since this is a showcase app.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+`flutter run -t ./lib/entrypoint/production.dart`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to test
+
+`flutter test`
+
+## How to build
+
+`flutter build apk --release -t ./lib/entrypoint/production.dart`

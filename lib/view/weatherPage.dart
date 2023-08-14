@@ -25,6 +25,10 @@ class WeatherPage extends StatelessWidget {
             children: [
               Text('Descrição: ${weather?.description}'),
               Text('Temperatura: ${weather?.temperature}°C'),
+              Text('Temperatura Máxima: ${weather?.maxTemp}°C'),
+              Text('Temperatura Mínima: ${weather?.minTemp}°C'),
+              Text('Umidade: ${weather?.humidity}%'),
+              Text('Vel. Vento: ${weather?.windSpeed} m/s'),
             ],
           );
         },
