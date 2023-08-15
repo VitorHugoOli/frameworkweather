@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'weatherStore.dart';
+part of 'weather_store.dart';
 
 // **************************************************************************
 // StoreGenerator

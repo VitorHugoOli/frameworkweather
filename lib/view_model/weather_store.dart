@@ -2,7 +2,7 @@ import 'package:frameworkweather/model/weather.dart';
 import 'package:frameworkweather/services/services.dart';
 import 'package:mobx/mobx.dart';
 
-part 'weatherStore.g.dart';
+part 'weather_store.g.dart';
 
 class WeatherStore = _WeatherStore with _$WeatherStore;
 

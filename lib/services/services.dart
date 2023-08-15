@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:frameworkweather/main.dart';
 import 'package:frameworkweather/model/weather.dart';
 import 'package:http/http.dart' as http;
+import 'package:logger/logger.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -33,7 +34,7 @@ class WeatherService {
   }
 
   get checkInit => !_isInitialized
-      ? throw Exception("NasaApi is not initialized. Call init() method first.")
+      ? throw Exception("WeatherService is not initialized. Call init() method first.")
       : null;
 
   get error => ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
@@ -59,10 +60,12 @@ class WeatherService {
       if (response.statusCode == 200) {
         return Weather.fromJson(jsonDecode(response.body));
       } else {
+        Logger().e("Failed to load weather - API Error - ${response.statusCode} - ${response.body}");
         error;
         return null;
       }
-    } catch (e) {
+    } catch (e,s) {
+      Logger().e("Failed to load weather",error: e,stackTrace: s);
       error;
       return null;
     }

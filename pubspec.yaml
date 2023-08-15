@@ -17,15 +17,11 @@ dependencies:
   cupertino_icons:
   http:
   google_fonts:
+  lottie:
 
 
   mobx: ^2.2.0
   flutter_mobx: ^2.0.6+5
-
-
-
-
-
 
 dev_dependencies:
   flutter_test:
@@ -33,6 +29,9 @@ dev_dependencies:
   flutter_lints:
   build_runner: ^2.4.6
   mobx_codegen: ^2.3.0
+  mockito:
+  provider:
+  logger:
 
 flutter:
   uses-material-design: true
@@ -43,3 +42,4 @@ flutter:
     - assets/min.png
     - assets/sun.png
     - assets/wind.png
+    - assets/animation/load.json
